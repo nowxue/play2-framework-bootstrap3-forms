@@ -15,7 +15,7 @@
             <p class="help-block">@elements.args.get('help)</p>
         }
         @if(elements.errors){
-            <div class="bs-callout bs-callout-danger">@elements.errors.mkString(", ")</div>
+            <div class="help-block"><span class="glyphicon glyphicon-exclamation-sign"></span> @elements.errors.mkString(", ")</div>
         }
     </div>
 </div>
