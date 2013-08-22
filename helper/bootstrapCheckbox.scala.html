@@ -9,7 +9,8 @@
         <div class="checkbox">
             <label>
                 <input type="checkbox" id="@elements.label" name="@elements.label"
-                       value="true" @if(elements.field.value){checked}> @elements.label.toString.capitalize
+                       value="true"
+                       @if(elements.field.value == Some("true")){checked}> @elements.label.toString.capitalize
             </label>
         </div>
         @if(elements.args.get('help)){
