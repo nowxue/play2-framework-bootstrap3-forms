@@ -1,0 +1,21 @@
+@(elements: helper.FieldElements)
+
+@**************************************************
+* Generate input according twitter bootsrap rules *
+**************************************************@
+
+<div class="form-group@if(elements.hasErrors){ has-error}">
+    <div class="col-lg-offset-2 col-lg-10">
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" id="@elements.id"> @elements.label.toString.capitalize
+            </label>
+        </div>
+        @if(elements.args.get('help)){
+            <p class="help-block">@elements.args.get('help)</p>
+        }
+        @if(elements.errors){
+            <div class="bs-callout bs-callout-danger">@elements.errors.mkString(", ")</div>
+        }
+    </div>
+</div>
